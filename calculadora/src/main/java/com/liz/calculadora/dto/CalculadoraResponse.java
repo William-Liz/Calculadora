@@ -13,6 +13,9 @@ public class CalculadoraResponse {
         this.resultado = resultado;
     }
 
+    public CalculadoraResponse(double n1, double n2, String operacao) {
+    }
+
     public double getN1() {
         return n1;
     }
