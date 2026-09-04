@@ -7,32 +7,33 @@ import org.springframework.stereotype.Service;
 @Service
 public class CalculadoraService {
 
-    public static CalculadoraResponse somar(CalculadoraRequest request) {
+    public CalculadoraResponse somar(CalculadoraRequest request) {
         double result = request.getN1() + request.getN2();
 
-        return new CalculadoraResponse(request.getN1(), request.getN2(), "soma," + result);
+        return new CalculadoraResponse(request.getN1(), request.getN2(), "soma", String.valueOf(result));
     }
 
-    public static CalculadoraResponse subtrair(CalculadoraRequest request) {
+
+    public CalculadoraResponse subtrair(CalculadoraRequest request) {
         double result = request.getN1() - request.getN2();
 
-        return new CalculadoraResponse(request.getN1(), request.getN2(), "subtrair," + result);
+        return new CalculadoraResponse(request.getN1(), request.getN2(), "subtrair", String.valueOf(result));
     }
 
-    public static CalculadoraResponse multiplicar(CalculadoraRequest request) {
+    public CalculadoraResponse multiplicar(CalculadoraRequest request) {
         double result = request.getN1() * request.getN2();
 
-        return new CalculadoraResponse(request.getN1(), request.getN2(), "multiplicar," + result);
+        return new CalculadoraResponse(request.getN1(), request.getN2(), "multiplicar", String.valueOf(result));
     }
 
-    public static CalculadoraResponse dividir(CalculadoraRequest request) {
+    public CalculadoraResponse dividir(CalculadoraRequest request) {
        double result;
         if (request.getN2() == 0) {
             result = 0;
         }else {
             result = request.getN1() / request.getN2();
         }
-        return new CalculadoraResponse(request.getN1(), request.getN2(), "dividir," + result);
+        return new CalculadoraResponse(request.getN1(), request.getN2(), "dividir", String.valueOf(result));
     }
 
 }

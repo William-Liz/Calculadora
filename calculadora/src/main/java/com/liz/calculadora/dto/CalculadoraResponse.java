@@ -11,9 +11,7 @@ public class CalculadoraResponse {
         this.n2 = n2;
         this.operacao = operacao;
         this.resultado = resultado;
-    }
 
-    public CalculadoraResponse(double n1, double n2, String operacao) {
     }
 
     public double getN1() {
