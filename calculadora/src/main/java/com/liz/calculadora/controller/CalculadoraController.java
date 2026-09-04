@@ -13,9 +13,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/calculadora")
 public class CalculadoraController {
 
-    @Autowired
-    CalculadoraService calculadoraService;
+    private final CalculadoraService calculadoraService;
 
+    @Autowired
     public CalculadoraController (CalculadoraService calculadoraService) {
         this.calculadoraService = calculadoraService;
     }
